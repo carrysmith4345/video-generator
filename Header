@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Video Generator</title>
+</head>
+<body>
+    <h1>Enter Your Text to Generate Video</h1>
+    <form id="textForm">
+        <textarea id="userText" placeholder="Enter your text here..." required></textarea><br>
+        <button type="submit">Generate Video</button>
+    </form>
+    <p id="status"></p>
+    <div id="videoContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
