@@ -1,0 +1,27 @@
+from flask import Flask, request, jsonify
+import openai  # Assuming you're using OpenAI's API for generating video content
+
+app = Flask(__name__)
+
+# Set up your OpenAI or another API key
+openai.api_key = "YOUR_OPENAI_API_KEY"
+
+@app.route("/generate-video", methods=["POST"])
+def generate_video():
+    data = request.get_json()
+    user_text = data.get("text")
+
+    # Call OpenAI or any other API to generate a video link from text input
+    # Assuming some hypothetical function to convert text to video link:
+    video_url = create_video_from_text(user_text)
+    
+    return jsonify({"videoUrl": video_url})
+
+def create_video_from_text(text):
+    # Mock-up function for text-to-video API call
+    # Replace this with actual API call code
+    # For example: request to video generation service
+    return "https://example.com/path/to/generated/video.mp4"
+
+if __name__ == "__main__":
+    app.run(debug=True)
